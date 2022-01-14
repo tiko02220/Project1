@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.company.AdminGui">
+  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="682" height="420"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <tabbedpane id="b8e38" binding="tabbedPane1" default-binding="true">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <preferred-size width="350" height="250"/>
+          </grid>
+        </constraints>
+        <properties>
+          <autoscrolls value="false"/>
+          <background color="-14013382"/>
+          <focusCycleRoot value="false"/>
+          <focusable value="false"/>
+          <foreground color="-7433063"/>
+          <inheritsPopupMenu value="false"/>
+          <name value=""/>
+          <opaque value="true"/>
+          <requestFocusEnabled value="true"/>
+          <tabLayoutPolicy value="0"/>
+          <tabPlacement value="1"/>
+          <toolTipText value=""/>
+          <verifyInputWhenFocusTarget value="false"/>
+          <visible value="true"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="c7a97" binding="panel3" layout-manager="GridLayoutManager" row-count="5" column-count="13" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="20" left="20" bottom="20" right="20"/>
+            <constraints>
+              <tabbedpane title="Untitled"/>
+            </constraints>
+            <properties>
+              <background color="-14013382"/>
+              <preferredSize width="500" height="300"/>
+              <visible value="false"/>
+            </properties>
+            <border type="empty">
+              <size top="10" left="10" bottom="10" right="10"/>
+            </border>
+            <children>
+              <component id="6d3d8" class="javax.swing.JLabel" binding="universityLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <labelFor value="b571a"/>
+                  <text value="Universities"/>
+                </properties>
+              </component>
+              <component id="4c6bd" class="javax.swing.JLabel" binding="facultyNameLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Faculty Name"/>
+                </properties>
+              </component>
+              <component id="e6144" class="javax.swing.JLabel" binding="minGridLabel">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <text value="Minimum Grid"/>
+                </properties>
+              </component>
+              <component id="947d5" class="javax.swing.JSpinner" binding="spinerMinGrid">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="60f3c" class="javax.swing.JTextArea" binding="admintextArea2">
+                <constraints>
+                  <grid row="3" column="2" row-span="2" col-span="3" vsize-policy="6" hsize-policy="0" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="100" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <columns value="15"/>
+                  <focusable value="false"/>
+                  <font size="14"/>
+                  <rows value="2"/>
+                  <selectionEnd value="0"/>
+                  <text value=""/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <hspacer id="f0b88">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="3050a" class="javax.swing.JButton" binding="addButton" default-binding="true">
+                <constraints>
+                  <grid row="3" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <enabled value="false"/>
+                  <focusPainted value="false"/>
+                  <foreground color="-14672097"/>
+                  <text value="Add"/>
+                </properties>
+              </component>
+              <component id="e1f29" class="javax.swing.JButton" binding="logOut">
+                <constraints>
+                  <grid row="4" column="5" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <borderPainted value="false"/>
+                  <contentAreaFilled value="true"/>
+                  <defaultCapable value="true"/>
+                  <foreground color="-14672097"/>
+                  <text value="Logout"/>
+                </properties>
+              </component>
+              <component id="b571a" class="javax.swing.JComboBox" binding="comboBox">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <actionCommand value=""/>
+                  <autoscrolls value="false"/>
+                  <background color="-2826266"/>
+                  <editable value="true"/>
+                  <enabled value="true"/>
+                  <font size="16"/>
+                  <foreground color="-14013382"/>
+                  <model/>
+                  <name value=""/>
+                  <opaque value="false"/>
+                  <visible value="true"/>
+                </properties>
+              </component>
+              <component id="64670" class="javax.swing.JLabel" binding="Students">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <text value="Students"/>
+                </properties>
+              </component>
+              <component id="c7f65" class="javax.swing.JSpinner" binding="spinnerStudents">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="883cc" class="javax.swing.JTextField" binding="facultyName">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <hspacer id="16785">
+                <constraints>
+                  <grid row="2" column="5" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <hspacer id="dbe8c">
+                <constraints>
+                  <grid row="3" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+            </children>
+          </grid>
+          <grid id="c8e5e" binding="panel4" layout-manager="GridLayoutManager" row-count="13" column-count="10" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="20" left="10" bottom="20" right="10"/>
+            <constraints>
+              <tabbedpane title="Untitled"/>
+            </constraints>
+            <properties>
+              <background color="-14013382"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="9b74a" class="javax.swing.JComboBox" binding="adminFaculty">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="a2b6" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <labelFor value="b571a"/>
+                  <text value="Faculties"/>
+                </properties>
+              </component>
+              <hspacer id="6bd63">
+                <constraints>
+                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <scrollpane id="c390c">
+                <constraints>
+                  <grid row="3" column="0" row-span="9" col-span="8" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="empty"/>
+                <children>
+                  <component id="29687" class="javax.swing.JTable" binding="table1" default-binding="true">
+                    <constraints/>
+                    <properties>
+                      <autoResizeMode value="1"/>
+                      <dropMode value="USE_SELECTION"/>
+                      <editingColumn value="1"/>
+                      <editingRow value="1"/>
+                    </properties>
+                    <clientProperties>
+                      <Table.isFileList class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </scrollpane>
+              <component id="bd86f" class="javax.swing.JComboBox" binding="adminUniversity">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+              </component>
+              <component id="c57ee" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Fira Code" size="12"/>
+                  <foreground color="-328961"/>
+                  <labelFor value="b571a"/>
+                  <text value="Universities"/>
+                </properties>
+              </component>
+              <component id="70d73" class="javax.swing.JButton" binding="infoButton" default-binding="true">
+                <constraints>
+                  <grid row="2" column="4" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Info"/>
+                </properties>
+              </component>
+              <vspacer id="46f0b">
+                <constraints>
+                  <grid row="12" column="3" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="3c236">
+                <constraints>
+                  <grid row="12" column="8" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <vspacer id="ecc7d">
+                <constraints>
+                  <grid row="9" column="8" row-span="1" col-span="2" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </vspacer>
+              <hspacer id="67b9f">
+                <constraints>
+                  <grid row="0" column="6" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+              <component id="666cd" class="javax.swing.JRadioButton" binding="selectAllRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="10" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="10" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-14013382"/>
+                  <foreground color="-591105"/>
+                  <text value="Select All"/>
+                </properties>
+              </component>
+              <component id="9fe3b" class="javax.swing.JButton" binding="deleteButton" default-binding="true">
+                <constraints>
+                  <grid row="11" column="9" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="Delete"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </tabbedpane>
+    </children>
+  </grid>
+  <inspectionSuppressions>
+    <suppress inspection="NoScrollPane" id="8c3f5"/>
+  </inspectionSuppressions>
+</form>
