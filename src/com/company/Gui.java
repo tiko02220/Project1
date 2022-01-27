@@ -32,7 +32,7 @@ public class Gui extends JFrame {
     Faculties fac;
     AdminGui admin;
     Configurations setToSQL = new Configurations();
-    Configurations getFromSQL = new Configurations();
+
     private JTextField textField1Name;
     private JTextField textField1Surname;
     private JButton clearButton;
@@ -85,16 +85,18 @@ public class Gui extends JFrame {
     }
 
     public void studentUpdate(Universities universities) {
-        if (getFromSQL.getConnection() != null) {
+        if (setToSQL.getConnection() != null) {
             try {
 
-                Statement stat = getFromSQL.getConnection().createStatement();
+                Statement stat =
+                        setToSQL.getConnection().createStatement();
                 for (Faculties faculties : universities.univFaculties) {
 
                     setToSQL.setFacultyTable(universities.getUniversityName().toLowerCase() +
                             "_" + faculties.getFacultyName().toLowerCase().replaceAll(" ", "_"));
                     String selectStudent = " select * from " + setToSQL.getFacultyTable();
-                    DatabaseMetaData data = getFromSQL.getConnection().getMetaData();
+                    DatabaseMetaData data =
+                            setToSQL.getConnection().getMetaData();
                     ResultSet resultSet1 = data.getTables("Student_Management", null,
                             setToSQL.getFacultyTable(), new String[]{"TABLE"});
 
@@ -131,10 +133,10 @@ public class Gui extends JFrame {
     }
 
 
-    void ubdateFromSQL(Universities yale, Universities oxford, Universities cambridge) {
-        setToSQL.getFaculty(yale, fac, setToSQL, getFromSQL);
-        setToSQL.getFaculty(cambridge, fac, setToSQL, getFromSQL);
-        setToSQL.getFaculty(oxford, fac, setToSQL, getFromSQL);
+    void updateFromSQL(Universities yale, Universities oxford, Universities cambridge) {
+        setToSQL.getFaculty(yale, fac, setToSQL);
+        setToSQL.getFaculty(cambridge, fac, setToSQL);
+        setToSQL.getFaculty(oxford, fac, setToSQL);
 
 
     }
@@ -269,20 +271,17 @@ public class Gui extends JFrame {
         });
 
 
-    }  // Username-admin Password-admin
+    }  // Username-admin Password-admina
 
     void gui() {
-
+        setToSQL.WakeOnLan();
         gInterface();
-
         yale.yale(yale);
         cambridge.cambridge(cambridge);
         oxford.oxford(oxford);
-        ubdateFromSQL(yale, cambridge, oxford);
-        studentUpdate(yale);
-        studentUpdate(cambridge);
-        studentUpdate(oxford);
         admin();
+
+
         textField1Surname.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
@@ -359,8 +358,11 @@ public class Gui extends JFrame {
             }
 
         });
-
-
+        setToSQL.getConnection();
+        updateFromSQL(yale, cambridge, oxford);
+        studentUpdate(yale);
+        studentUpdate(cambridge);
+        studentUpdate(oxford);
         comboBox2Faculties.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

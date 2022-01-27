@@ -113,16 +113,16 @@ public class AdminGui extends Gui {
 
 
     void addStudnet(Universities universities) {
-        if (getFromSQL.getConnection() != null) {
+        if (setToSQL.getConnection() != null) {
             try {
-                Statement stat = getFromSQL.getConnection().createStatement();
+                Statement stat = setToSQL.getConnection().createStatement();
 
                 for (Faculties faculties : universities.univFaculties) {
                     if (adminFaculty.getSelectedItem().equals(faculties.getFacultyName()) || adminFaculty.getSelectedItem().equals("All")) {
                         setToSQL.setFacultyTable(universities.getUniversityName().toLowerCase() +
                                 "_" + faculties.getFacultyName().replaceAll(" ", "_"));
                         String selectStudent = " select * from " + setToSQL.getFacultyTable();
-                        DatabaseMetaData data = getFromSQL.getConnection().getMetaData();
+                        DatabaseMetaData data = setToSQL.getConnection().getMetaData();
                         ResultSet resultSet1 = data.getTables("Student_Management", null, setToSQL.getFacultyTable(), new String[]{"TABLE"});
                         if (resultSet1.next()) {
                             ResultSet resultSet = stat.executeQuery(selectStudent);
@@ -337,7 +337,7 @@ public class AdminGui extends Gui {
             setToSQL.setFacultyTable(comboBox.getSelectedItem().toString().toLowerCase()
                     + "_" + facultyName.getText().toLowerCase().replaceAll(" ", "_"));
             setToSQL.addTable(setToSQL);
-            ubdateFromSQL(yale1, cambridge1, oxford1);
+            updateFromSQL(yale1, cambridge1, oxford1);
             spinerMinGrid.setValue(0);
             spinnerStudents.setValue(1);
             facultyName.setText(null);
